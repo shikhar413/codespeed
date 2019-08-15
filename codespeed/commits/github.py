@@ -43,7 +43,8 @@ def fetch_json(url):
 
     if json_obj is None:
         try:
-            json_obj = json.load(urlopen(url))
+            res_body = urlopen(url).read().decode('utf-8')
+            json_obj = json.loads(res_body)
         except IOError as e:
             logger.exception("Unable to load %s: %s",
                              url, e, exc_info=True)

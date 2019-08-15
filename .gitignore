@@ -4,6 +4,8 @@
 .DS_Store
 *.db
 sample_project/repos/*
+speed_openmc/repos/*
+speed_openmc/secret_key
 override
 build
 dist

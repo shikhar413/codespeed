@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='codespeed',
-    version='0.13.0',
+    version='0.13.0+openmcspeed',
     author='Miquel Torres',
     author_email='tobami@gmail.com',
     url='https://github.com/tobami/codespeed',
@@ -10,7 +10,7 @@ setup(
     license='GNU Lesser General Public License version 2.1',
     keywords=['benchmarking', 'visualization'],
     install_requires=['django>=1.11<2.2', 'isodate>=0.4.7,<0.6', 'matplotlib>=1.4.3,<2.0'],
-    packages=find_packages(exclude=['ez_setup', 'sample_project']),
+    packages=find_packages(exclude=['ez_setup', 'sample_project', 'openmc_speed']),
     setup_requires=['setuptools-markdown'],
     long_description_markdown_filename='README.md',
     description='A web application to monitor and analyze the performance of your code',

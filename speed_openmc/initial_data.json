@@ -1,0 +1,44 @@
+[
+{
+  "model": "codespeed.project",
+  "pk": 1,
+  "fields": {
+    "name": "OpenMC",
+    "repo_type": "H",
+    "repo_path": "https://github.com/openmc-dev/openmc",
+    "repo_user": "",
+    "repo_pass": "",
+    "commit_browsing_url": "https://github.com/openmc-dev/openmc/commit/{commitid}",
+    "track": true,
+    "default_branch": "develop"
+  }
+},
+{
+  "model": "codespeed.branch",
+  "pk": 1,
+  "fields": {
+    "name": "develop",
+    "project": 1
+  }
+},
+{
+  "model": "codespeed.executable",
+  "pk": 1,
+  "fields": {
+    "name": "openmc-gcc",
+    "description": "OpenMC compiled with GNU 7.4, MPICH 3.3, PHDF5 1.10.2",
+    "project": 1
+  }
+},
+{
+  "model": "codespeed.environment",
+  "pk": 1,
+  "fields": {
+    "name": "tesla",
+    "cpu": "2 Intel(R) Xeon(R) E5-2650 (2.00GHz/16-core/95W/20MB)",
+    "memory": "2x 8GB (1x8GB) Hynix PC3-12800R (DDR3-1600) 2x 8GB (1x8GB) Micron C3-12800 (DDR3-1600)",
+    "os": "Ubuntu 18.04.2 LTS",
+    "kernel": "GNU/Linux 4.18.0-16-generic"
+  }
+}
+]
