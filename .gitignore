@@ -5,7 +5,9 @@
 *.db
 sample_project/repos/*
 speed_openmc/repos/*
+speed_openmc/local_settings.py
 speed_openmc/secret_key
+speed_openmc/sitestatic
 override
 build
 dist

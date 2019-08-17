@@ -18,7 +18,7 @@ def basic_auth_required(realm='default'):
             if settings.ALLOW_ANONYMOUS_POST:
                 logger.debug('allowing anonymous post')
                 allowed = True
-            elif hasattr(request, 'user') and request.user.is_authenticated():
+            elif hasattr(request, 'user') and request.user.is_authenticated:
                 allowed = True
             elif 'HTTP_AUTHORIZATION' in request.META:
                 logger.debug('checking for http authorization header')
@@ -27,7 +27,7 @@ def basic_auth_required(realm='default'):
                 http_auth = request.META['HTTP_AUTHORIZATION']
                 authmeth, auth = http_auth.split(' ', 1)
                 if authmeth.lower() == 'basic':
-                    username, password = decode_basic_auth(auth)
+                    username, password = decode_basic_auth(eval(auth))
                     user = authenticate(username=username, password=password)
                     if user is not None and user.is_active:
                         logger.info(

@@ -3,7 +3,6 @@
 import os
 
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 TOPDIR = os.path.split(BASEDIR)[1]
@@ -24,7 +23,6 @@ DATABASES = {
 }
 
 TIME_ZONE = 'America/Chicago'
-USE_TZ = True
 
 LANGUAGE_CODE = 'en-us'
 
@@ -37,9 +35,6 @@ MEDIA_ROOT = os.path.join(BASEDIR, "media")
 MEDIA_URL = '/media/'
 
 ADMIN_MEDIA_PREFIX = '/static/admin/'
-
-with open(os.path.join(BASEDIR, 'secret_key')) as f:
-    SECRET_KEY = f.read().strip()
 
 MIDDLEWARE = (
     'django.middleware.common.CommonMiddleware',
@@ -88,3 +83,5 @@ STATICFILES_DIRS = (
 
 # Codespeed settings that can be overwritten here.
 from codespeed.settings import *
+
+from .local_settings import *
