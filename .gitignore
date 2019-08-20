@@ -10,6 +10,7 @@ speed_openmc/secret_key
 speed_openmc/sitestatic
 override
 build
+conf
 dist
 codespeed.egg-info/
 
